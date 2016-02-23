@@ -1,0 +1,40 @@
+PNC\BaseAppBundle\Entity\Site:
+    type: entity
+    table: suivi.pr_base_site
+    schema: suivi
+    #repositoryClass: PNC\BaseAppBundle\Repositories\SiteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        bs_nom:
+            type: string
+            length: 250
+        bs_obr_id:
+            type: integer
+        bs_type_id:
+            type: integer
+        bs_code:
+            type: string
+            length: 25
+            nullable: true
+        bs_date:
+            type: date
+            nullable: true
+        bs_description:
+            type: text
+            nullable: true
+        geom:
+            type: geometry
+        meta_create_timestamp:
+            type: date
+            nullable: true
+        meta_update_timestamp:
+            type: date
+            nullable: true
+        meta_numerisateur_id:
+            type: integer
+            nullable: true

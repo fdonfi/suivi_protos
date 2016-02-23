@@ -1,0 +1,27 @@
+pnc_how_to:
+    resource: "@PNCHowToBundle/Resources/config/routing.yml"
+    prefix:   /howto/
+
+commons_users:
+    resource: "@CommonsUsersBundle/Resources/config/routing.yml"
+    prefix:   /users/
+
+pnc_ext:
+    resource: "@PNCExtBundle/Resources/config/routing.yml"
+    prefix:   /
+
+pnc_chiro:
+    resource: "@PNCChiroBundle/Resources/config/routing.yml"
+    prefix:   /chiro/
+
+pnc_chiro_config:
+    resource: "@PNCChiroBundle/Resources/config/routing_config.yml"
+    prefix:   /chiro/config/
+
+pnc_base_app:
+    resource: "@PNCBaseAppBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation

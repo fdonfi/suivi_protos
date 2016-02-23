@@ -1,0 +1,26 @@
+services:
+#    pnc_base_app.example:
+#        class: PNC\BaseAppBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+    baseSiteService:
+        class: PNC\BaseAppBundle\Services\BaseSiteService
+        arguments: [@geometry, @entityService]
+    baseObservationService:
+        class: PNC\BaseAppBundle\Services\BaseObservationService
+        arguments: [@geometry, @entityService]
+    pagination:
+        class: PNC\Utils\PaginationService
+        arguments: [@doctrine]
+    geometry:
+        class: PNC\Utils\GeometryService
+    normalizer:
+        class: PNC\Utils\NormalizeService
+    entityService:
+        class: PNC\Utils\EntityService
+        arguments: [@geometry, @kernel, @doctrine]
+    thesaurusService:
+        class: PNC\Utils\ThesaurusService
+        arguments: [@doctrine, @normalizer]           
+    configService:
+        class: PNC\Utils\ConfigService
+        arguments: [@thesaurusService]

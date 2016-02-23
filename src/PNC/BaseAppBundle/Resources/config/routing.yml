@@ -1,0 +1,89 @@
+pnc_suivi_index:
+    path: /
+    defaults: { _controller: PNCBaseAppBundle:Config:index }
+    requirements:
+        _method: GET
+
+pnc_config_getapps:
+    path: /config/apps
+    defaults: { _controller: PNCBaseAppBundle:Config:getApps }
+    requirements:
+        _method: GET
+
+
+pnc_config_upload:
+    path: /upload_file
+    defaults: {_controller: PNCBaseAppBundle:Config:upload }
+    requirements:
+        _method: POST
+
+
+pnc_config_delete_file:
+    path: /upload_file/{file_id}
+    defaults: {_controller: PNCBaseAppBundle:Config:deleteFile }
+    requirements:
+        _method: DELETE
+
+
+pnc_communes_xhr:
+    path: /commune/{insee}
+    defaults: {_controller: PNCBaseAppBundle:Config:getCommune}
+    requirements:
+        _method: GET
+
+#pnc_config_getobservateurs:
+#    path: /observateurs/{q}
+#    defaults: {_controller: PNCBaseAppBundle:Config:getObservateurs, q: null }
+#    requirements:
+#        _method: GET 
+
+
+#pnc_observation_list:
+#    path:     /observation
+#    defaults: { _controller: PNCBaseAppBundle:Observation:list }
+#    requirements:
+#        _method: GET
+#
+#pnc_observation_detail:
+#    path:     /observation/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Observation:detail }
+#    requirements:
+#        _method: GET
+#
+#pnc_observation_save:
+#    path:     /observation/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Observation:save, id: null }
+#    requirements:
+#        _method: POST
+#
+#pnc_observation_suppr:
+#    path:     /observation/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Observation:delete }
+#    requirements:
+#        _method: DELETE
+#
+#
+#
+#pnc_site_list:
+#    path:     /site
+#    defaults: { _controller: PNCBaseAppBundle:Site:list }
+#    requirements:
+#        _method: GET
+#
+#pnc_site_detail:
+#    path:     /site/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Site:detail, id: null }
+#    requirements:
+#        _method: GET
+#
+#pnc_site_save:
+#    path:     /site/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Site:save }
+#    requirements:
+#        _method: POST
+#
+#pnc_site_suppr:
+#    path:     /site/{id}
+#    defaults: { _controller: PNCBaseAppBundle:Site:delete }
+#    requirements:
+#        _method: DELETE
